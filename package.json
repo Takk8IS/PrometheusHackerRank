@@ -1,0 +1,111 @@
+{
+  "name": "prometheushackerrank",
+  "version": "1.0.0",
+  "description": "PrometheusHackerRank is a powerful Chrome extension that provides users with the knowledge to pass HackerRank certification tests.",
+  "author": {
+    "name": "David C Cavalcante (Fjallstoppur)",
+    "email": "fjallstoppur@proton.me",
+    "organisation": "Takk Innovate Studio"
+  },
+  "license": "CC-BY-4.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Takk8IS/PrometheusHackerRank.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Takk8IS/PrometheusHackerRank/issues"
+  },
+  "homepage": "https://github.com/Takk8IS/PrometheusHackerRank#readme",
+  "keywords": [
+    "certification",
+    "test",
+    "hackerrank",
+    "ai",
+    "automation",
+    "chromium",
+    "scraper",
+    "scraping",
+    "prometheus",
+    "prometheushackerrank",
+    "davcavalcante",
+    "david c cavalcante",
+    "fjallstoppur",
+    "takk innovate studio",
+    "takk8is"
+  ],
+  "engines": {
+    "node": ">=20.x"
+  },
+  "type": "module",
+  "main": "prometheushackerrank",
+  "preferGlobal": true,
+  "dependencies": {
+    "body-parser": "*",
+    "cors": "*",
+    "dotenv": "*",
+    "express": "*",
+    "express-rate-limit": "*",
+    "groq-sdk": "*",
+    "helmet": "*",
+    "node-cache": "*",
+    "prettier": "*",
+    "puppeteer": "*",
+    "sharp": "^*",
+    "@tensorflow/tfjs-node": "*",
+    "xml2js": "*"
+  },
+  "devDependencies": {
+    "eslint": "*",
+    "jest": "*",
+    "prettier": "*"
+  },
+  "scripts": {
+    "start": "node --no-deprecation prometheushackerrank",
+    "postinstall": "npm run start",
+    "format": "prettier --write '**/*.js'",
+    "link-deps": "npm link body-parser cors dotenv express express-rate-limit groq-sdk helmet node-cache prettier puppeteer sharp @tensorflow/tfjs-node xml2js",
+    "lint": "eslint . --ext .js",
+    "test": "jest"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "es2021": true
+    },
+    "extends": "eslint:recommended",
+    "parserOptions": {
+      "ecmaVersion": 12,
+      "sourceType": "module"
+    },
+    "rules": {
+      "indent": [
+        "error",
+        2
+      ],
+      "linebreak-style": [
+        "error",
+        "unix"
+      ],
+      "quotes": [
+        "error",
+        "double"
+      ],
+      "semi": [
+        "error",
+        "always"
+      ]
+    }
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "collectCoverage": true,
+    "coverageDirectory": "coverage"
+  },
+  "hack": {
+    "tool": "chromium",
+    "strategy": "automation",
+    "goal": "knowledge acquisition",
+    "attitude": "relentless",
+    "style": "stealth"
+  }
+}

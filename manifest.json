@@ -1,0 +1,58 @@
+{
+    "manifest_version": 3,
+    "name": "PrometheusHackerRank",
+    "author": "David C Cavalcante",
+    "homepage_url": "https://github.com/Takk8IS",
+    "version": "1.0.0",
+    "description": "PrometheusHackerRank is a powerful Chrome extension that provides users with the knowledge to pass HackerRank certification tests.",
+    "permissions": [
+        "activeTab",
+        "alarms",
+        "clipboardWrite",
+        "downloads",
+        "notifications",
+        "scripting",
+        "storage",
+        "tabs",
+        "webNavigation",
+        "webRequest"
+    ],
+    "host_permissions": ["*://*.groq.com/*", "*://*.hackerrank.com/*"],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_icon": {
+            "48": "images/icon48.png",
+            "72": "images/icon72.png",
+            "96": "images/icon96.png",
+            "128": "images/icon128.png",
+            "144": "images/icon144.png",
+            "192": "images/icon192.png",
+            "512": "images/icon512.png",
+            "1024": "images/icon1024.png"
+        },
+        "default_title": "PrometheusHackerRank",
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": ["*://*.groq.com/*", "*://*.hackerrank.com/*"],
+            "js": ["content.js"],
+            "run_at": "document_idle"
+        }
+    ],
+    "icons": {
+        "48": "images/icon48.png",
+        "72": "images/icon72.png",
+        "96": "images/icon96.png",
+        "128": "images/icon128.png",
+        "144": "images/icon144.png",
+        "192": "images/icon192.png",
+        "512": "images/icon512.png",
+        "1024": "images/icon1024.png"
+    },
+    "content_security_policy": {
+        "extension_pages": "script-src 'self'; object-src 'self'"
+    }
+}

@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PrometheusHackerRank</title>
+    <meta name="author" content="Takk™ Innovate Studio" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        width: 370px;
+        max-width: 370px;
+        margin: 0;
+        padding: 20px;
+        background-color: #f4f5f7;
+        color: #161616;
+      }
+      h1,
+      h2 {
+        color: #0079bf;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .status {
+        margin-top: 15px;
+        padding: 10px;
+        border-radius: 3px;
+        text-align: center;
+      }
+      .status.success {
+        background-color: #e3fcef;
+        color: #0a6245;
+      }
+      .status.error {
+        background-color: #fee8e9;
+        color: #c02424;
+      }
+      .sync-section {
+        text-align: center;
+        margin-top: 20px;
+      }
+      .sync-section img {
+        width: 100px;
+        height: 100px;
+        margin: 0 10px;
+      }
+      textarea {
+        width: 100%;
+        height: 200px;
+        margin-top: 10px;
+        resize: vertical;
+        font-family: monospace;
+        font-size: 12px;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+      }
+      button {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        background-color: #0079bf;
+        color: white;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+      button:disabled {
+        background-color: #c0c0c0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Prometheus > HackerRank</h1>
+    <div id="status" class="status"></div>
+    <div id="sync-section" class="sync-section">
+      <img src="/images/icon128.png" alt="Prometheus HackerRank" />
+      <h2>Problem statement</h2>
+      <textarea id="formattedContent" readonly></textarea>
+      <button id="copyButton">Copy to clipboard</button>
+      <h2>Your solution</h2>
+      <textarea
+        id="solutionInput"
+        placeholder="Paste your code here..."
+      ></textarea>
+      <button id="solveButton">Solve</button>
+      <h2>Prometheus solution</h2>
+      <textarea id="aiSolution" readonly></textarea>
+      <button id="copySolutionButton">Copy solution</button>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>
